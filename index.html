@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS class 23 NOV Loop</title>
+</head>
+<body>
+    <button onclick="abc()">Click there</button>
+    <h1 id="ai"></h1>
+
+    <script>
+        function abc() {
+            var i = 0;
+            var result = '';  // Variable to accumulate the result
+            
+            // Create a loop with a delay using setTimeout to make it visible
+            function loop() {
+                if (i < 5000) {
+                    result += 'qwertyuiopasdfghjklzxcvbnm ';  // Accumulate 'hy' with a space
+                    document.getElementById("ai").innerHTML = result;  // Update the <h1> element
+                    i++;
+                    
+                    // Call the loop function every 10ms to create a small delay
+                    setTimeout(loop, 10);
+                }
+            }
+
+            loop();  // Start the loop
+        }
+    </script>
+</body>
+</html>
